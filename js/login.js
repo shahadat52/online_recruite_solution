@@ -10,13 +10,16 @@ sign_in_btn.addEventListener("click", () => {
     container.classList.remove("sign-up-mode");
 });
 
-const handleLogin = () => {
+const handleLogin = (event) => {
+    event.preventDefault()
     const userName = document.getElementById("login-name").value;
-    const email = document.getElementById("login-password").value;
-    console.log(userName, email);
+    const password = document.getElementById("login-password").value;
     // location.href = "./navbar.html";
-   const navigate = location.assign("navbar.html")
-   console.log(navigate);
+    if (password == '55555') {
+        window.location.assign("")
+        alert('Login successful')
+        return
+    }
 };
 
 const handleSignup = (e) => {
